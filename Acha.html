@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Firyal ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 50px;
+            color: #333;
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        p {
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff3b2f;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .music-icon {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Halaman Utama -->
+    <div id="home">
+        <h1>Selamat Datang di Dunia Firyal ❤️</h1>
+        <p>Halo, Firyal Nihalya Salsabilla...</p>
+        <p>Aku tahu aku salah, tapi aku sangat mencintaimu.</p>
+        <button onclick="showAbout()">Lanjutkan</button>
+    </div>
+
+    <!-- Halaman Tentang Firyal -->
+    <div id="about" class="hidden">
+        <h1>Tentang Firyal ❤️</h1>
+        <p>Firyal adalah orang yang paling istimewa di dunia ini.</p>
+        <p>Berikut beberapa alasan mengapa aku mencintaimu:</p>
+        <ul>
+            <li>Kebaikan hatimu tak tertandingi.</li>
+            <li>Semuanya indah saat bersamamu.</li>
+            <li>Kamu adalah cahaya dalam hidupku.</li>
+        </ul>
+        <button onclick="showApology()">Lanjutkan</button>
+    </div>
+
+    <!-- Halaman Maaf -->
+    <div id="apology" class="hidden">
+        <h1>Aku Minta Maaf ❤️</h1>
+        <p>Aku minta maaf atas semua kesalahanku.</p>
+        <p>Aku janji akan lebih baik lagi untukmu.</p>
+        <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif" alt="Maaf Ya">
+        <button onclick="showMemories()">Lanjutkan</button>
+    </div>
+
+    <!-- Halaman Kenangan -->
+    <div id="memories" class="hidden">
+        <h1>Kenangan Bersama ❤️</h1>
+        <p>Momen-momen kita selalu membekas di hatiku.</p>
+        <img src="https://via.placeholder.com/400" alt="Kenangan Kita">
+        <p>(Tambahkan foto kalian jika ada)</p>
+        <div class="music-icon">🎵 Musik sedang diputar...</div>
+        <audio autoplay loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Browsermu tidak mendukung audio.
+        </audio>
+        <button onclick="showClosing()">Lanjutkan</button>
+    </div>
+
+    <!-- Halaman Penutup -->
+    <div id="closing" class="hidden">
+        <h1>Terima Kasih ❤️</h1>
+        <p>Firyal, aku sangat mencintaimu.</p>
+        <p>Semoga kamu bisa memaafkanku.</p>
+        <button onclick="window.location.href='https://wa.me/[NOMOR_ANDA]'">Hubungi Aku</button>
+    </div>
+
+    <script>
+        function showAbout() {
+            document.getElementById("home").classList.add("hidden");
+            document.getElementById("about").classList.remove("hidden");
+        }
+        function showApology() {
+            document.getElementById("about").classList.add("hidden");
+            document.getElementById("apology").classList.remove("hidden");
+        }
+        function showMemories() {
+            document.getElementById("apology").classList.add("hidden");
+            document.getElementById("memories").classList.remove("hidden");
+        }
+        function showClosing() {
+            document.getElementById("memories").classList.add("hidden");
+            document.getElementById("closing").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
